@@ -158,5 +158,17 @@ $(document).ready(function(){
     });
 */
 
+function executeAjaxRequest(server, requestDate, successCallback, failureCallback) {
+
+    jQuery.ajax({
+        url: server,
+        type: "POST",
+        dataType: 'JSON',
+        data: requestDate,
+        success: successCallback,
+        error:failureCallback
+    });
+}
+
 });
 
